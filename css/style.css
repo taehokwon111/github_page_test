@@ -21,13 +21,22 @@ html,body{
 #renderer{
   position: absolute;
    z-index: 11;
-   right: 50%;
-   transform: translateX(50%);
+   right: 0%;
+   opacity: 1;
+   -webkit-animation: rotation 60s infinite linear;
+
   }
+  
+  @-webkit-keyframes rotation {
+    
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
 .fd{
    position: relative;
    display: flex;
    align-items: center;
+   font-weight: bold;
   }
 #upload{
     position: fixed; 

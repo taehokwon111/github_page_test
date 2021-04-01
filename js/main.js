@@ -2,8 +2,8 @@ let canvas, ctx, center_x, center_y, radius, bars,
 x_end, y_end, bar_height, bar_width, audio_f, audio, now_load, files,
 frequency_array;
 
-bars = 500;
-bar_width = 2;
+bars = 150;
+bar_width = 1;
 
 
 function handleFiles(event) {
@@ -49,7 +49,7 @@ function animationLooper(){
 //장치 크기로 설정
 canvas = document.getElementById("renderer");
 canvas.width = window.innerWidth ;
-canvas.height = window.innerHeight / 1.2;
+canvas.height = window.innerHeight / 1.1;
 ctx = canvas.getContext("2d");
 
 // 창의 중심을 찾아서 크기조절
@@ -61,12 +61,14 @@ radius = 300;
 let gradient = ctx.createLinearGradient(0,0,0,canvas.height);
 // gradient.addColorStop(0,"#000000");
 // gradient.addColorStop(1,"#002A47");
-ctx.fillStyle = gradient;
-ctx.fillRect(0,0,canvas.width,canvas.height);
+
+let asdf = new Image("/img/3.gif");
 
 //원 그리기
 ctx.beginPath();  
-ctx.arc(center_x,center_y,radius,0,2*Math.PI);
+//ctx.arc(center_x,center_y,radius,0,2*Math.PI);
+ctx.arc(center_x,center_y,radius,0,2*Math.PI)
+//ctx.fill(); 채우는거
 ctx.stroke();
 
 analyser.getByteFrequencyData(frequency_array);
@@ -75,7 +77,7 @@ for(let i = 0; i < bars; i++){
     //원을 같은 부분으로 나눔 
     rads = Math.PI * 2 / bars;
     
-    bar_height = frequency_array[i]*0.7;
+    bar_height = frequency_array[i]*0.8;
     
     // set coordinates
     x = center_x + Math.cos(rads * i) * (radius);
@@ -93,7 +95,7 @@ window.requestAnimationFrame(animationLooper);
 // 막대그리기
 function drawBar(x1, y1, x2, y2, width, frequency){
 
-let lineColor = "rgb(" + frequency + ", " + frequency + ", " + 153 + ")";
+let lineColor = "rgb(" + frequency+2 + ", " + frequency+2 + ", " + frequency+2 + ")";
 
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;
@@ -101,6 +103,7 @@ ctx.beginPath();
 ctx.moveTo(x1,y1);
 ctx.lineTo(x2,y2);
 ctx.stroke();
+
 }
 
 
