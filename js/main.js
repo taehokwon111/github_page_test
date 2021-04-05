@@ -95,7 +95,7 @@ window.requestAnimationFrame(animationLooper);
 // 막대그리기
 function drawBar(x1, y1, x2, y2, width, frequency){
 
-let lineColor = "rgb(" + 28 + ", " + frequency + ", " + frequency + ")";
+let lineColor = "rgb(" + 50 + ", " + frequency + ", " + frequency + ")";
 
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;
