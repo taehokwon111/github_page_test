@@ -3,8 +3,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url('2.jpg');
-    background-color: rgb(0, 3, 34);
+    background: linear-gradient(#000000, #1b1b1b, #523e3d, #1b1b1b, #000000 );
     background-attachment: fixed;
     background-size: cover;
   }

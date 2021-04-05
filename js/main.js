@@ -2,8 +2,8 @@ let canvas, ctx, center_x, center_y, radius, bars,
 x_end, y_end, bar_height, bar_width, audio_f, audio, now_load, files,
 frequency_array;
 
-bars = 150;
-bar_width = 2;
+bars = 300;
+bar_width = 1;
 
 
 function handleFiles(event) {
@@ -77,7 +77,7 @@ for(let i = 0; i < bars; i++){
     //원을 같은 부분으로 나눔 
     rads = Math.PI * 2 / bars;
     
-    bar_height = frequency_array[i]*0.8;
+    bar_height = frequency_array[i]*0.7;
     
     // set coordinates
     x = center_x + Math.cos(rads * i) * (radius);
@@ -95,7 +95,7 @@ window.requestAnimationFrame(animationLooper);
 // 막대그리기
 function drawBar(x1, y1, x2, y2, width, frequency){
 
-let lineColor = "rgb(" + frequency + ", " + frequency + ", " + frequency + ")";
+let lineColor = "rgb(" + 28 + ", " + frequency + ", " + frequency + ")";
 
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;
