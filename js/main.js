@@ -2,8 +2,8 @@ let canvas, ctx, center_x, center_y, radius, bars,
 x_end, y_end, bar_height, bar_width, audio_f, audio, now_load, files,
 frequency_array;
 
-bars = 200;
-bar_width = 1;
+bars = 150;
+bar_width = 2;
 
 
 function handleFiles(event) {
@@ -95,7 +95,7 @@ window.requestAnimationFrame(animationLooper);
 // 막대그리기
 function drawBar(x1, y1, x2, y2, width, frequency){
 
-let lineColor = "rgb(" + frequency+2 + ", " + frequency+2 + ", " + frequency+2 + ")";
+let lineColor = "rgb(" + frequency + ", " + frequency + ", " + frequency + ")";
 
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;
