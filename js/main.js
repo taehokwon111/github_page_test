@@ -2,8 +2,8 @@ let canvas, ctx, center_x, center_y, radius, bars,
 x_end, y_end, bar_height, bar_width, audio_f, audio, now_load, files,
 frequency_array;
 
-bars = 300;
-bar_width = 1;
+bars = 150;
+bar_width = 10;
 
 
 function handleFiles(event) {
@@ -40,7 +40,7 @@ function initPage(){
     frequency_array = new Uint8Array(analyser.frequencyBinCount);
 
     audio.play();
-    audio.volume = 0.5;
+    audio.volume = 1;
     animationLooper();
 }   
 
@@ -55,7 +55,7 @@ ctx = canvas.getContext("2d");
 // 창의 중심을 찾아서 크기조절
 center_x = canvas.width / 2;
 center_y = canvas.height / 2;
-radius = 300;
+radius = 250;
 
 // 배경스타일 지정
 let gradient = ctx.createLinearGradient(0,0,0,canvas.height);
@@ -95,7 +95,7 @@ window.requestAnimationFrame(animationLooper);
 // 막대그리기
 function drawBar(x1, y1, x2, y2, width, frequency){
 
-let lineColor = "rgb(" + 50 + ", " + frequency + ", " + frequency + ")";
+let lineColor = "rgb(" + 0 + ", " + 21 + ", " + frequency + ")";
 
 ctx.strokeStyle = lineColor;
 ctx.lineWidth = width;

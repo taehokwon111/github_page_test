@@ -3,7 +3,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#000000, #1b1b1b, #745a59, #1b1b1b, #000000 );
+    background: linear-gradient(#eaf7ff, #80d9f0, #0099ff, #80d9f0, #eaf7ff );
     background-attachment: fixed;
     background-size: cover;
   }
@@ -48,7 +48,7 @@ html,body{
       z-index: 990;
       width: 100px;
       height: 30px;
-      color: rgb(255, 255, 255);
+      color: rgb(0, 23, 87);
       font-size: 30px;
       cursor: pointer;
 
@@ -60,7 +60,7 @@ html,body{
    z-index: 11;
    width: 100px;
    height: 30px;
-   color: #ffffff; 
+   color:rgb(0, 23, 87); 
    font-size: 30px;}
 
    .wrap{
