@@ -32,6 +32,9 @@ html,body{
     from {-webkit-transform: rotate(0deg);}
     to   {-webkit-transform: rotate(359deg);}
 }
+.vol{
+  margin: 0;
+}
 .fd{
    position: relative;
    display: flex;

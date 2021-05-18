@@ -40,7 +40,7 @@ function initPage(){
     frequency_array = new Uint8Array(analyser.frequencyBinCount);
 
     audio.play();
-    audio.volume = 1;
+    audio.volume = vol();
     animationLooper();
 }   
 
@@ -111,5 +111,10 @@ ctx.stroke();
 
 }
 
+function vol(){
+    let vovo = prompt("Do you want to change the volume? \nPlease enter a number from 0 to 1");
+    console.log(vovo);
+    return vovo;
+}
 
 document.getElementById("upload").addEventListener("change", handleFiles, false);
