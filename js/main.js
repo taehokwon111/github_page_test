@@ -2,8 +2,8 @@ let canvas, ctx, center_x, center_y, radius, bars,
 x_end, y_end, bar_height, bar_width, audio_f, audio, now_load, files,
 frequency_array;
 
-bars = 150;
-bar_width = 1;
+bars = 120;
+bar_width = 2;
 
 
 function handleFiles(event) {
